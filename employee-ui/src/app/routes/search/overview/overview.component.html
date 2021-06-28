@@ -1,0 +1,51 @@
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-12">
+      <h2>Current available employees in the system</h2>
+      <hr>
+    </div>
+
+    <div class="col-12">
+      <div id="employeeContainer">
+        <div class="employee" *ngFor="let employee of employees">
+          <div class="left-section">
+            <img src="https://i.pravatar.cc/300">
+          </div>
+
+          <div class="right-section">
+            <ul>
+              <li>
+                <b>Name:</b> {{employee.firstName}} {{employee.lastName}}
+              </li>
+              <li>
+                <b>Age:</b> {{employee.age}}
+              </li>
+              <li>
+                <b>Position:</b> {{employee.position}}
+              </li>
+              <li>
+                <b>Email:</b> {{employee.email}}
+              </li>
+
+              <li *ngIf="employee.mobile">
+                <b>Mobile:</b> {{employee.mobile}}
+              </li>
+
+              <li *ngIf="employee.phone">
+                <b>Phone:</b> {{employee.phone}}
+              </li>
+            </ul>
+          </div>
+
+          <div class="controls">
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <button type="button" class="btn btn-primary" (click)="onEmployeeClick('edit', employee)">Edit</button>
+              <button type="button" class="btn btn-danger"  (click)="onEmployeeClick('delete' , employee)">Remove</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

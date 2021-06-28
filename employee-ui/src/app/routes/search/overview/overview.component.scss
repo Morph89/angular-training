@@ -1,0 +1,29 @@
+#employeeContainer {
+  .employee {
+    background-color: aliceblue;
+    min-height: 100px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-bottom: 15px;
+
+    .right-section {
+      flex-grow: 2;
+      padding: 10px;
+    }
+
+    .controls {
+      padding: 10px;
+    }
+
+    .left-section {
+      width: 150px;
+
+      img {
+        width: 100%;
+        height: auto;
+        padding: 10px;
+      }
+    }
+  }
+}
